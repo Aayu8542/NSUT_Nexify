@@ -18,6 +18,11 @@ import AddFriends from '../pages/SplitBill/AddFriends';
 import SplitResult from '../pages/SplitBill/SplitResult';
 import SplitDetails from '../pages/SplitBill/SplitDetails';
 
+// Profile
+import Profile from '../pages/Profile/Profile';
+import ProfileTransactions from '../pages/Profile/ProfileTransactions';
+import ProfileSettings from '../pages/Profile/ProfileSettings';
+
 function ProtectedRoute({ children }) {
   const { isLoggedIn } = useAuth();
   
@@ -61,6 +66,11 @@ export default function AppRoutes() {
       <Route path="/split/create/friends" element={<ProtectedRoute><AddFriends /></ProtectedRoute>} />
       <Route path="/split/create/result" element={<ProtectedRoute><SplitResult /></ProtectedRoute>} />
       <Route path="/split/:id" element={<ProtectedRoute><SplitDetails /></ProtectedRoute>} />
+
+      {/* Profile */}
+      <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+      <Route path="/profile/transactions" element={<ProtectedRoute><ProfileTransactions /></ProtectedRoute>} />
+      <Route path="/profile/settings" element={<ProtectedRoute><ProfileSettings /></ProtectedRoute>} />
 
       {/* Stubs */}
       <Route path="/savings" element={<ProtectedRoute><StubPage title="Savings Goals" /></ProtectedRoute>} />

@@ -5,8 +5,18 @@ export const user = {
   name: 'Aarav',
   fullName: 'Aarav Sharma',
   phone: '+91 98765 43210',
+  email: 'aarav.sharma@email.com',
+  upi: 'aarav.s@clarity',
   avatar: null,
   greeting: 'Good Morning',
+  memberSince: '2024-01-15',
+};
+
+export const profileStats = {
+  totalDeposits: 125000,
+  totalWithdrawals: 48240,
+  formattedDeposits: '₹1,25,000',
+  formattedWithdrawals: '₹48,240',
 };
 
 export const balance = {
@@ -235,7 +245,7 @@ export const navItems = [
   { id: 'send', label: 'Send', route: '/send', icon: 'send' },
   { id: 'split', label: 'Split', route: '/split', icon: 'split' },
   { id: 'savings', label: 'Savings', route: '/savings', icon: 'savings' },
-  { id: 'profile', label: 'Profile', route: '/dashboard', icon: 'profile' },
+  { id: 'profile', label: 'Profile', route: '/profile', icon: 'profile' },
 ];
 
 export const contacts = [

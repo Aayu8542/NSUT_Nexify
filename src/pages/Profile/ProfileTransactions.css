@@ -1,0 +1,127 @@
+.profile-transactions-page {
+  padding: var(--space-xl) var(--space-lg);
+  padding-bottom: var(--space-xl);
+  background-color: var(--color-bg-primary);
+  min-height: 100vh;
+}
+
+.txn-summary {
+  display: flex;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.txn-summary-item {
+  flex: 1;
+  text-align: center;
+}
+
+.txn-summary-label {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.txn-summary-value {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+.txn-summary-value.credit {
+  color: var(--color-success);
+}
+
+.txn-summary-value.debit {
+  color: var(--color-text-primary);
+}
+
+.txn-summary-divider {
+  width: 1px;
+  background: var(--color-border-light);
+  margin: 0 var(--space-md);
+}
+
+.txn-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.txn-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--color-bg-card);
+  border-radius: var(--radius-md);
+}
+
+.txn-item:first-child {
+  border-radius: var(--radius-lg) var(--radius-lg) var(--radius-md) var(--radius-md);
+}
+
+.txn-item:last-child {
+  border-radius: var(--radius-md) var(--radius-md) var(--radius-lg) var(--radius-lg);
+}
+
+.txn-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+
+.txn-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.txn-name {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+}
+
+.txn-meta {
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+}
+
+.txn-right {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.txn-amount {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  font-family: var(--font-heading);
+  margin-bottom: 2px;
+}
+
+.txn-amount.credit {
+  color: var(--color-success);
+}
+
+.txn-amount.debit {
+  color: var(--color-text-primary);
+}
+
+.txn-time {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+}

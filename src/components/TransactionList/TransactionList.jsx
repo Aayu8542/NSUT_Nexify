@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { transactions } from '../../data/mockData';
 import './TransactionList.css';
@@ -20,11 +21,18 @@ const itemVariants = {
 };
 
 export default function TransactionList() {
+  const navigate = useNavigate();
+
   return (
     <div className="transaction-list">
       <div className="transaction-list-header">
         <h3 className="transaction-list-title">Recent Activity</h3>
-        <button className="transaction-list-see-all">See All</button>
+        <button
+          className="transaction-list-see-all"
+          onClick={() => navigate('/profile/transactions')}
+        >
+          See All
+        </button>
       </div>
 
       <motion.div

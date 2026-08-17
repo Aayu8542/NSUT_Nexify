@@ -43,7 +43,8 @@ export default function Navbar() {
     <nav className="navbar">
       {navItems.map((item) => {
         const isActive = location.pathname === item.route ||
-          (item.id === 'home' && location.pathname === '/dashboard');
+          (item.id === 'home' && location.pathname === '/dashboard') ||
+          (item.id === 'profile' && location.pathname.startsWith('/profile'));
 
         return (
           <motion.button
