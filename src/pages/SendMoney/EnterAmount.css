@@ -1,0 +1,79 @@
+.enter-amount-page {
+  padding: var(--space-xl) var(--space-lg);
+  padding-bottom: var(--space-xl);
+  background-color: var(--color-bg-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.selected-contact-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+  background: var(--color-bg-card);
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.amount-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--space-xl);
+  flex: 1;
+  justify-content: center;
+}
+
+.amount-currency {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--space-sm);
+}
+
+.amount-input {
+  font-family: var(--font-heading);
+  font-size: 64px;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  text-align: center;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  letter-spacing: -0.02em;
+}
+
+.amount-input::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.note-input-container {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto var(--space-2xl);
+}
+
+.note-input {
+  width: 100%;
+  background: var(--color-bg-card);
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-full);
+  padding: 12px var(--space-lg);
+  font-size: var(--text-sm);
+  text-align: center;
+  transition: all var(--duration-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.note-input:focus {
+  border-color: var(--color-accent-green);
+}
+
+.bottom-actions {
+  margin-top: auto;
+}

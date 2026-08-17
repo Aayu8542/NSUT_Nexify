@@ -1,0 +1,107 @@
+.review-transfer-page {
+  padding: var(--space-xl) var(--space-lg);
+  padding-bottom: var(--space-xl);
+  background-color: var(--color-bg-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-xl);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.review-amount-section {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.review-amount-label {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xs);
+}
+
+.review-amount {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.review-amount .currency {
+  font-size: var(--text-2xl);
+  margin-right: 4px;
+}
+
+.review-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.review-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-label {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.review-value {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.review-value.free {
+  color: var(--color-success);
+}
+
+.bottom-actions {
+  margin-top: auto;
+  padding-top: var(--space-xl);
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-xl);
+}
+
+.back-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  margin-right: var(--space-md);
+  background: var(--color-bg-card);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--duration-fast);
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-primary);
+}
+
+.back-btn:hover {
+  background: var(--color-border-light);
+}
+
+.page-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
