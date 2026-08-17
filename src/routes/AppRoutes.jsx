@@ -11,6 +11,13 @@ import EnterAmount from '../pages/SendMoney/EnterAmount';
 import ReviewTransfer from '../pages/ReviewTransfer/ReviewTransfer';
 import TransferSuccess from '../pages/TransferSuccess/TransferSuccess';
 
+// Phase 3 components
+import SplitBill from '../pages/SplitBill/SplitBill';
+import CreateSplit from '../pages/SplitBill/CreateSplit';
+import AddFriends from '../pages/SplitBill/AddFriends';
+import SplitResult from '../pages/SplitBill/SplitResult';
+import SplitDetails from '../pages/SplitBill/SplitDetails';
+
 function ProtectedRoute({ children }) {
   const { isLoggedIn } = useAuth();
   
@@ -48,11 +55,16 @@ export default function AppRoutes() {
       <Route path="/send/review" element={<ProtectedRoute><ReviewTransfer /></ProtectedRoute>} />
       <Route path="/send/success" element={<ProtectedRoute><TransferSuccess /></ProtectedRoute>} />
       
+      {/* Phase 3: Split Bill Flow */}
+      <Route path="/split" element={<ProtectedRoute><SplitBill /></ProtectedRoute>} />
+      <Route path="/split/create" element={<ProtectedRoute><CreateSplit /></ProtectedRoute>} />
+      <Route path="/split/create/friends" element={<ProtectedRoute><AddFriends /></ProtectedRoute>} />
+      <Route path="/split/create/result" element={<ProtectedRoute><SplitResult /></ProtectedRoute>} />
+      <Route path="/split/:id" element={<ProtectedRoute><SplitDetails /></ProtectedRoute>} />
+
       {/* Stubs */}
-      <Route path="/split" element={<ProtectedRoute><StubPage title="Split Bill" /></ProtectedRoute>} />
       <Route path="/savings" element={<ProtectedRoute><StubPage title="Savings Goals" /></ProtectedRoute>} />
       <Route path="/goal/:id" element={<ProtectedRoute><StubPage title="Goal Details" /></ProtectedRoute>} />
-      <Route path="/split/:id" element={<ProtectedRoute><StubPage title="Split Details" /></ProtectedRoute>} />
     </Routes>
   );
 }

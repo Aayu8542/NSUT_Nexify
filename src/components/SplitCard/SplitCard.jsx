@@ -23,8 +23,8 @@ export default function SplitCard({ split }) {
         
         <div className="split-avatars">
           {split.participants.slice(0, 4).map((p, i) => (
-            <div key={i} className={`split-avatar ${p.paid ? 'paid' : ''}`}>
-              {p.name.charAt(0)}
+            <div key={p.id || i} className={`split-avatar ${p.paid ? 'paid' : ''}`}>
+              {(p.name === 'Me' ? 'M' : p.name.charAt(0)).toUpperCase()}
             </div>
           ))}
           {split.participants.length > 4 && (

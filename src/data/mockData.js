@@ -183,19 +183,50 @@ export const savingsGoals = [
 export const activeSplits = [
   {
     id: 'split_001',
-    title: 'Dinner at Olive',
-    totalAmount: 4800,
-    formatted: '₹4,800',
+    title: 'Dinner',
+    totalAmount: 4000,
+    formatted: '₹4,000',
     participants: [
-      { name: 'Aarav', paid: true, amount: 1200 },
-      { name: 'Rahul', paid: true, amount: 1200 },
-      { name: 'Priya', paid: false, amount: 1200 },
-      { name: 'Neha', paid: false, amount: 1200 },
+      { id: 'usr_001', name: 'Me', paid: true, amount: 1000, isMe: true },
+      { id: 'cnt_001', name: 'Rahul', paid: true, amount: 1000 },
+      { id: 'cnt_002', name: 'Priya', paid: false, amount: 1000 },
+      { id: 'cnt_004', name: 'Ankit', paid: false, amount: 1000 },
     ],
     paidCount: 2,
     totalCount: 4,
     createdBy: 'Aarav',
-    date: '2026-08-16',
+    date: '2026-08-17',
+  },
+  {
+    id: 'split_002',
+    title: 'Trip',
+    totalAmount: 12000,
+    formatted: '₹12,000',
+    participants: [
+      { id: 'usr_001', name: 'Me', paid: true, amount: 4000, isMe: true },
+      { id: 'cnt_001', name: 'Rahul', paid: false, amount: 4000 },
+      { id: 'cnt_004', name: 'Ankit', paid: false, amount: 4000 },
+    ],
+    paidCount: 1,
+    totalCount: 3,
+    createdBy: 'Aarav',
+    date: '2026-08-14',
+  },
+  {
+    id: 'split_003',
+    title: 'Movie Night',
+    totalAmount: 2400,
+    formatted: '₹2,400',
+    participants: [
+      { id: 'usr_001', name: 'Me', paid: true, amount: 600, isMe: true },
+      { id: 'cnt_002', name: 'Priya', paid: true, amount: 600 },
+      { id: 'cnt_001', name: 'Rahul', paid: false, amount: 600 },
+      { id: 'cnt_004', name: 'Ankit', paid: false, amount: 600 },
+    ],
+    paidCount: 2,
+    totalCount: 4,
+    createdBy: 'Aarav',
+    date: '2026-08-12',
   },
 ];
 
@@ -234,5 +265,24 @@ export const contacts = [
     initials: 'AS',
     avatarColor: '#3B82F6',
     recent: true
+  },
+  {
+    id: 'cnt_004',
+    name: 'Ankit Verma',
+    upi: 'ankit.v@okhdfc',
+    phone: '+91 6543210987',
+    initials: 'AV',
+    avatarColor: '#22C55E',
+    recent: true
   }
 ];
+
+export const meContact = {
+  id: 'usr_001',
+  name: 'Me',
+  upi: 'aarav.s@clarity',
+  phone: user.phone,
+  initials: user.name.charAt(0),
+  avatarColor: '#1F5C4A',
+  isMe: true,
+};

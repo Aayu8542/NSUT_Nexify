@@ -1,0 +1,91 @@
+.contact-multi-select {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-multi-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--color-bg-card);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-out);
+  border: 2px solid transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.contact-multi-item:first-child {
+  border-radius: var(--radius-lg) var(--radius-lg) var(--radius-md) var(--radius-md);
+}
+
+.contact-multi-item:last-child {
+  border-radius: var(--radius-md) var(--radius-md) var(--radius-lg) var(--radius-lg);
+}
+
+.contact-multi-item:only-child {
+  border-radius: var(--radius-lg);
+}
+
+.contact-multi-item.selected {
+  border-color: var(--color-accent-green);
+  background: rgba(31, 92, 74, 0.04);
+}
+
+.contact-multi-item:hover {
+  background: #F8F5F0;
+}
+
+.contact-multi-item.selected:hover {
+  background: rgba(31, 92, 74, 0.06);
+}
+
+.contact-checkbox {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--duration-fast);
+  color: white;
+}
+
+.contact-checkbox.checked {
+  background: var(--color-accent-green);
+  border-color: var(--color-accent-green);
+}
+
+.contact-multi-item .contact-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.contact-multi-item .contact-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-multi-item .contact-name {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+}
+
+.contact-multi-item .contact-upi {
+  font-size: var(--text-sm);
+  color: var(--color-text-tertiary);
+}
