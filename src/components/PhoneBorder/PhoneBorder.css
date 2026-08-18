@@ -1,0 +1,92 @@
+.phone-frame {
+  width: 100%;
+  max-width: 480px;
+  margin: 40px auto;
+  aspect-ratio: 9/19.5;
+  background: #fff;
+  border-radius: 50px;
+  border: 3px solid #333;
+  overflow: hidden;
+  box-shadow: 
+    0 0 0 1px rgba(0, 0, 0, 0.05),
+    0 10px 40px rgba(0, 0, 0, 0.15);
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Notch */
+.phone-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 24px;
+  background: #000;
+  border-radius: 0 0 35px 35px;
+  z-index: 10;
+}
+
+/* Screen container */
+.phone-screen {
+  width: 100%;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 0;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-screen::-webkit-scrollbar {
+  width: 6px;
+}
+
+.phone-screen::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.phone-screen::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.phone-screen::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Home indicator */
+.phone-home-indicator {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+  z-index: 10;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .phone-frame {
+    border-radius: 40px;
+    border: 2px solid #333;
+  }
+
+  .phone-notch {
+    width: 150px;
+    height: 22px;
+  }
+
+  .phone-home-indicator {
+    width: 100px;
+    height: 3px;
+  }
+}

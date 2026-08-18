@@ -2,6 +2,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { SplitProvider } from './context/SplitContext';
 import AppRoutes from './routes/AppRoutes';
+import PhoneBorder from './components/PhoneBorder/PhoneBorder';
 
 function App() {
   return (
@@ -9,7 +10,9 @@ function App() {
       <AuthProvider>
         <SplitProvider>
           <Router>
-            <AppRoutes />
+            <PhoneBorder>
+              <AppRoutes />
+            </PhoneBorder>
           </Router>
         </SplitProvider>
       </AuthProvider>

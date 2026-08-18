@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import Navbar from '../components/Navbar/Navbar';
 
 export default function StubPage({ title }) {
   const navigate = useNavigate();
@@ -28,8 +27,6 @@ export default function StubPage({ title }) {
           This feature is part of the next development phase. Stay tuned!
         </p>
       </motion.div>
-      
-      <Navbar />
     </div>
   );
 }

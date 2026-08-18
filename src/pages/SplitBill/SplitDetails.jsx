@@ -1,7 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useSplits } from '../../context/SplitContext';
-import Navbar from '../../components/Navbar/Navbar';
 import '../../styles/page-layout.css';
 import './SplitDetails.css';
 
@@ -27,7 +26,6 @@ export default function SplitDetails() {
           </button>
           <h1 className="page-title">Split Not Found</h1>
         </div>
-        <Navbar />
       </div>
     );
   }
@@ -124,8 +122,6 @@ export default function SplitDetails() {
           </button>
         </motion.div>
       )}
-
-      <Navbar />
     </div>
   );
 }

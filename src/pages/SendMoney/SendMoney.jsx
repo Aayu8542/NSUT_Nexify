@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { contacts } from '../../data/mockData';
 import ContactList from '../../components/ContactList/ContactList';
-import Navbar from '../../components/Navbar/Navbar';
 import './SendMoney.css';
 
 export default function SendMoney() {
@@ -70,7 +69,6 @@ export default function SendMoney() {
         <ContactList contacts={filteredContacts} onSelect={handleSelectContact} />
       </motion.div>
 
-      <Navbar />
     </div>
   );
 }

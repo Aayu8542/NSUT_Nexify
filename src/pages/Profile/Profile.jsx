@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useAuth } from '../../context/AuthContext';
 import { profileStats } from '../../data/mockData';
-import Navbar from '../../components/Navbar/Navbar';
 import './Profile.css';
 
 const menuItems = [
@@ -167,7 +166,6 @@ export default function Profile() {
         Log Out
       </motion.button>
 
-      <Navbar />
     </div>
   );
 }

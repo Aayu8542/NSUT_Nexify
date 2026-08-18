@@ -3,7 +3,6 @@ import BalanceCard from '../../components/BalanceCard/BalanceCard';
 import QuickActions from '../../components/QuickActions/QuickActions';
 import SpendingSummary from '../../components/SpendingSummary/SpendingSummary';
 import TransactionList from '../../components/TransactionList/TransactionList';
-import Navbar from '../../components/Navbar/Navbar';
 import './Dashboard.css';
 
 export default function Dashboard() {
@@ -13,7 +12,6 @@ export default function Dashboard() {
       <QuickActions />
       <SpendingSummary />
       <TransactionList />
-      <Navbar />
     </div>
   );
 }

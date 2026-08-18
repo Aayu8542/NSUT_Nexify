@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useSplits } from '../../context/SplitContext';
 import SplitCard from '../../components/SplitCard/SplitCard';
-import Navbar from '../../components/Navbar/Navbar';
 import '../../styles/page-layout.css';
 import './SplitBill.css';
 
@@ -56,7 +55,6 @@ export default function SplitBill() {
         </div>
       </motion.div>
 
-      <Navbar />
     </div>
   );
 }
