@@ -19,6 +19,11 @@ import AddFriends from '../pages/SplitBill/AddFriends';
 import SplitResult from '../pages/SplitBill/SplitResult';
 import SplitDetails from '../pages/SplitBill/SplitDetails';
 
+// Phase 4 components
+import Savings from '../pages/Savings/Savings';
+import CreateGoal from '../pages/Savings/CreateGoal';
+import GoalDetails from '../pages/Savings/GoalDetails';
+
 // Profile
 import Profile from '../pages/Profile/Profile';
 import ProfileTransactions from '../pages/Profile/ProfileTransactions';
@@ -70,13 +75,17 @@ export default function AppRoutes() {
         <Route path="/split/create/result" element={<ProtectedRoute><SplitResult /></ProtectedRoute>} />
         <Route path="/split/:id" element={<ProtectedRoute><SplitDetails /></ProtectedRoute>} />
 
+        {/* Phase 4: Savings & Goals */}
+        <Route path="/savings" element={<ProtectedRoute><Savings /></ProtectedRoute>} />
+        <Route path="/savings/create" element={<ProtectedRoute><CreateGoal /></ProtectedRoute>} />
+        <Route path="/savings/:id" element={<ProtectedRoute><GoalDetails /></ProtectedRoute>} />
+
         {/* Profile */}
         <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
         <Route path="/profile/transactions" element={<ProtectedRoute><ProfileTransactions /></ProtectedRoute>} />
         <Route path="/profile/settings" element={<ProtectedRoute><ProfileSettings /></ProtectedRoute>} />
 
         {/* Stubs */}
-        <Route path="/savings" element={<ProtectedRoute><StubPage title="Savings Goals" /></ProtectedRoute>} />
         <Route path="/goal/:id" element={<ProtectedRoute><StubPage title="Goal Details" /></ProtectedRoute>} />
       </Routes>
       <Navbar />

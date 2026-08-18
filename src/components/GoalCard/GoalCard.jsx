@@ -10,7 +10,7 @@ export default function GoalCard({ goal }) {
     <motion.div
       className="goal-card"
       whileTap={{ scale: 0.98 }}
-      onClick={() => navigate(`/goal/${goal.id}`)}
+      onClick={() => navigate(`/savings/${goal.id}`)}
     >
       <ProgressRing radius={28} stroke={4} progress={goal.percentage} color="#1F5C4A">
         <span className="goal-icon">{goal.icon}</span>

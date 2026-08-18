@@ -1,0 +1,215 @@
+.create-goal-page {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  background-color: var(--color-bg-primary);
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.back-btn:hover {
+  color: var(--color-text-primary);
+}
+
+.create-goal-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.form-label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  letter-spacing: 0.02em;
+}
+
+.form-input {
+  width: 100%;
+  padding: var(--space-md) var(--space-lg);
+  border: 1.5px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  font-family: inherit;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-accent-green);
+  background: rgba(31, 92, 74, 0.02);
+  box-shadow: 0 0 0 3px rgba(31, 92, 74, 0.1);
+}
+
+.form-input::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.input-with-prefix {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: var(--space-lg);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  pointer-events: none;
+}
+
+.input-with-prefix .form-input {
+  padding-left: calc(var(--space-lg) + 24px);
+}
+
+.emoji-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.emoji-button {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-secondary);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+  font-size: 28px;
+}
+
+.emoji-button:hover {
+  border-color: var(--color-accent-green);
+  background: rgba(31, 92, 74, 0.05);
+}
+
+.emoji-button.active {
+  border-color: var(--color-accent-green);
+  background: rgba(31, 92, 74, 0.1);
+  box-shadow: 0 0 0 3px rgba(31, 92, 74, 0.1);
+}
+
+.goal-preview {
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.preview-title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.preview-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  background: white;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-light);
+}
+
+.preview-icon {
+  font-size: 32px;
+  min-width: 40px;
+  text-align: center;
+}
+
+.preview-content {
+  flex: 1;
+}
+
+.preview-name {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.preview-amount {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-accent-green);
+  margin-bottom: var(--space-sm);
+}
+
+.preview-date {
+  font-size: var(--text-sm);
+  color: var(--color-text-tertiary);
+}
+
+.form-actions {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.btn-primary,
+.btn-secondary {
+  flex: 1;
+  padding: var(--space-md) var(--space-lg);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-out);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.btn-primary {
+  background: var(--color-accent-green);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1a4a38;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(31, 92, 74, 0.3);
+}
+
+.btn-secondary {
+  background: var(--color-border-light);
+  color: var(--color-text-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--color-bg-secondary);
+}
+
+@media (max-width: 600px) {
+  .emoji-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
